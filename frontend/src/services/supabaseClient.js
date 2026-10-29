@@ -1,8 +1,8 @@
 import { createClient } from '@supabase/supabase-js';
 import { tabId } from './tabSession';
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://lumfldogcbflbiqvlrqw.supabase.co';
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'sb_publishable_baDkcUSsiZPEbXACM9hFqg_BRZ-2e-D';
 
 export const isSupabaseConfigured = Boolean(
   supabaseUrl &&
