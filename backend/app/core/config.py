@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24  # 24 hours
 
-    DATABASE_URL: str = "sqlite:///./cems.db"
+    DATABASE_URL: str = "sqlite:////tmp/cems.db" if os.environ.get("VERCEL") else "sqlite:///./cems.db"
 
     # Supabase — used to verify Google OAuth tokens on the backend
     SUPABASE_URL: str = ""
